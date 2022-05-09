@@ -1,0 +1,6 @@
+n,size,node_color,y,x
+1,2,orange,t1,day1
+2,2,orange,m1,day1
+3,9,orange,t2,day2
+4,20,orange,t3,day3
+5,1,orange,m2,day3
