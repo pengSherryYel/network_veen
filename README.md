@@ -1,10 +1,15 @@
 
 ## install  
 Name: network_veen.py
+
 Dependcency:
+
     * pandas
+
     * matplotlib
+
     * networkx
+
 
 
 if you do not want to install these file, a virtual env are provied.
