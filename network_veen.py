@@ -10,9 +10,9 @@ parser.add_argument("-e",type=str,required=True,help="edge_profile. header must 
 parser.add_argument("-n",type=str,required=True,help="node_profile. header must same with example/node_file.txt")
 ##optional
 parser.add_argument("-o",type=str,help="output image",default="./output.network_veen.pdf")
-parser.add_argument("--title",type=str,help="title of output image",default="network")
-parser.add_argument("--xlable",type=str,help="xlable of output image",default="day")
-parser.add_argument("--ylable",type=str,help="ylable of output image",default="sample")
+parser.add_argument("--title",type=str,help="title of output image",default="network_veen")
+parser.add_argument("--xlable",type=str,help="xlable of output image",default="")
+parser.add_argument("--ylable",type=str,help="ylable of output image",default="")
 
 args = parser.parse_args()
 
