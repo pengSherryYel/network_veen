@@ -70,8 +70,11 @@ min_value=-1
 x_label_str = [x_label_int2str[x] if x in x_label_int2str else "" for x in range(min_value, x_lim_value + 1)]
 y_label_str = [y_label_int2str[y] if y in y_label_int2str else "" for y in range(min_value, y_lim_value + 1)]
 
+x_label_integer = [x for x in range(min_value, x_lim_value + 1)]
+y_label_integer = [x for x in range(min_value, y_lim_value + 1)]
         
 print(x_label_str,y_label_str)
+print(x_label_integer, y_label_integer)
 print(x_lim_value,y_lim_value)
 
 ## form the pos dict
@@ -113,12 +116,14 @@ ax.xaxis.set_ticks_position('bottom')
 
 ## set int to str axes
 ax.set_xlim(min_value,x_lim_value)
+plt.xticks(x_label_integer)
 ticks_loc = ax.get_xticks().tolist()
 ax.xaxis.set_major_locator(mticker.FixedLocator(ticks_loc))
 ax.set_xticklabels(x_label_str)
 
 
 ax.set_ylim(min_value,y_lim_value)
+plt.yticks(y_label_integer)
 yticks_loc = ax.get_yticks().tolist()
 ax.yaxis.set_major_locator(mticker.FixedLocator(ticks_loc))
 ax.set_yticklabels(y_label_str)

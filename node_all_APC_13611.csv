@@ -1,0 +1,13 @@
+n,size,node_color,y,x
+APC_P_12_C,7.09,orange,C,12_week_pi
+APC_P_12_S,9.13,orange,S,12_week_pi
+APC_P_12_I,4.21,orange,I,12_week_pi
+APC_C_12_C,14.56,orange,C,12_week_pi
+APC_C_12_S,13.75,orange,S,12_week_pi
+APC_C_12_I,3.71,orange,I,12_week_pi
+APC_P_24_C,8.94,orange,C,24_week_pi
+APC_P_24_S,10.44,orange,S,24_week_pi
+APC_P_24_I,3.18,orange,I,24_week_pi
+APC_C_24_C,7.61,orange,C,24_week_pi
+APC_C_24_S,8.28,orange,S,24_week_pi
+APC_C_24_I,4.84,orange,I,24_week_pi
