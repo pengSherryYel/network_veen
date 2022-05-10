@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
 import pandas as pd
 import os,argparse
+import random
 
 parser = argparse.ArgumentParser(description='network veen')
 ##required
@@ -38,7 +39,7 @@ G = nx.Graph()
 
 for i in edged.index:
     G.add_edge(edged.loc[i,"n1"],edged.loc[i,"n2"],
-               weight=int(edged.loc[i,"weight"]),
+               weight=float(edged.loc[i,"weight"]),
                color=edged.loc[i,"weigth_color"])
 
 edges = G.edges()
@@ -78,10 +79,13 @@ print(x_label_integer, y_label_integer)
 print(x_lim_value,y_lim_value)
 
 ## form the pos dict
+## add generate random
+random.seed(12)
 for i in noded.index:
-    posD[noded.loc[i,"n"]] = [x_label_int[noded.loc[i,"x"]],
+    random_value = random.uniform(-0.5, 0.5)
+    posD[noded.loc[i,"n"]] = [x_label_int[noded.loc[i,"x"]] + random_value,
                               y_label_int[noded.loc[i,"y"]]]
-    
+
 print(posD)
 
 ##-----------------------------
@@ -125,7 +129,7 @@ ax.set_xticklabels(x_label_str)
 ax.set_ylim(min_value,y_lim_value)
 plt.yticks(y_label_integer)
 yticks_loc = ax.get_yticks().tolist()
-ax.yaxis.set_major_locator(mticker.FixedLocator(ticks_loc))
+ax.yaxis.set_major_locator(mticker.FixedLocator(yticks_loc))
 ax.set_yticklabels(y_label_str)
 
 
